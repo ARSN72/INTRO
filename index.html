@@ -1,163 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arshan's Intro</title>
-  <style>
-    /* Universal Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: linear-gradient(135deg, #1e1e2f, #111729);
-      font-family: 'Arial', sans-serif;
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .container {
-      max-width: 800px;
-      width: 90%;
-      padding: 30px;
-      background: rgba(17, 23, 41, 0.9);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-      text-align: center;
-      animation: fade-in 1.5s ease-out forwards;
-      transform: translateY(50px);
-      opacity: 0;
-    }
-
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      transition: transform 0.5s ease, box-shadow 0.3s ease;
-    }
-
-    img:hover {
-      transform: scale(1.2);
-      box-shadow: 0 0 25px #0abde3;
-    }
-
-    h1.title {
-      font-size: 40px;
-      color: #0abde3;
-      text-shadow: 2px 2px 10px rgba(0, 0, 255, 0.3);
-      animation: glowing 2s infinite;
-    }
-
-    h2 {
-      margin-top: 10px;
-      font-size: 28px;
-      color: #ffdd00;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    h3 {
-      margin-top: 15px;
-      font-size: 20px;
-    }
-
-    h3 a {
-      color: #00ffcc;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-
-    h3 a:hover {
-      color: #ff00ff;
-      text-shadow: 0 0 10px #ff00ff;
-    }
-
-    .button-container {
-      margin-top: 20px;
-    }
-
-    .neon-button {
-      margin: 10px;
-      padding: 10px 20px;
-      border: 2px solid #0abde3;
-      border-radius: 50px;
-      background: transparent;
-      color: #fff;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.5s;
-    }
-
-    .neon-button:hover {
-      background-color: #0abde3;
-      color: #111729;
-      box-shadow: 0 0 15px #0abde3, 0 0 30px #0abde3;
-    }
-
-    p {
-      margin-top: 15px;
-      font-size: 18px;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    }
-
-    @keyframes glowing {
-      0% { color: #0abde3; }
-      50% { color: #eeff00; }
-      100% { color: #ff00ff; }
-    }
-
-    @keyframes fade-in {
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 20px;
-      }
-      h1.title {
-        font-size: 32px;
-      }
-      h2 {
-        font-size: 24px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arshan Mansuri - AR Developer & Cyber Security Enthusiast</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-  <div class="container">
-    <img src="img.jpg" alt="Profile Picture of Arshan Mansuri">
-    <h1 class="title">HELLO WORLD!</h1>
-    <h2>I'm <span style="color: #0abde3;">ARSHAN MANSURI</span></h2>
-    <div class="button-container">
-      <a href="https://www.linkedin.com/in/arshan-mansuri-139b93195/" target="_blank">
-        <button class="neon-button">LinkedIn</button>
-      </a>
-      <a href="https://www.instagram.com/justarsn/" target="_blank">
-        <button class="neon-button">Instagram</button>
-      </a>
-      <a href="https://www.twitter.com/justarsn" target="_blank">
-        <button class="neon-button">Twitter</button>
-      </a>
-      <a href="https://arsn72.github.io/INTRO/youtube.html" target="_blank">
-        <button class="neon-button">YouTube</button>
-      </a>
-      <a href="https://www.snapchat.com/add/arsn.ar?share_id=ZPkl40LLey0&locale=en-MM" target="_blank">
-        <button class="neon-button">Snapchat</button>
-      </a>
-    </div>
-    <p>Pursuing B.Tech Degree in Cyber Security and Blockchain Technology (CSIT-CS)</p>
-    <p>🤞🏼 Let's Connect!</p>
-  </div>
+    <div id="stars-container"></div>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- <li><a href="certifications.html">Certifications</a></li> -->
+                <li><a href="https://github.com/ARSN72/INTRO/blob/main/CV_ArshanMansuri.pdf" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    CV
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section id="home">
+            <div class="profile-image">
+                <img src="img.jpg"?height=200&width=200" alt="Arshan Mansuri" width="200" height="200">
+            </div>
+            <h1>Arshan Mansuri</h1>
+            <p>AR Developer & Cyber Security Enthusiast</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="card ">
+                <p>Pre-final year B.Tech student specializing in Computer Science with a focus on Cybersecurity and Blockchain at IPS
+                    Academy, Indore. Possess hands-on experience with security operations, compliance, and incident response through
+                    internships and academic projects. Eager to apply technical skills in IT security and contribute to real-world InfoSec
+                    operations. Adept in supporting audits, performing security monitoring, and maintaining documentation. Passionate
+                    about learning and growing in the dynamic field of information security.
+                    </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </div>
+                    <span>Unity 3D</span><br>
+                    <span class="skill-percentage">70%</span>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <span>Cyber Security</span> <br>
+                    <span class="skill-percentage">40%</span>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <span>3D Modeling</span><br>
+                    <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <span>Lens Studio</span><br>
+                    <span class="skill-percentage">60%</span>
+                </div>
+                <div class="skill">
+                    <div class="skill-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
+                    <span>Network Security</span><br>
+                    <span class="skill-percentage">82%</span>
+                </div>
+            </div>
+            <div class="center-button">
+                <a href="certifications.html" class="button">View My Certifications</a>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-panel ar">
+                    <h3>AR Experience</h3>
+                    <div class="project-card">
+                        <h4>EduAR</h4>
+                        <p>AR Based E-learning Application</p>
+                    </div>
+                    <a href="projects.html" class="button">View All AR Projects</a>
+                </div>
+                <div class="project-panel cybersecurity">
+                    <h3>Cybersecurity Projects</h3>
+                    <div class="project-card">
+                        <h4>File Binder</h4>
+                        <p>Advanced tool for combining Two files in One</p>
+                    </div>
+                    <a href="projects.html" class="button">View All Cybersecurity Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="blog">
+            <h2>Blog & Social Media</h2>
+            <div class="blog-grid">
+                <div class="card">
+                    <h3>Latest LinkedIn Post</h3>
+                    <div class="embed-container">
+                        <iframe src="https://www.linkedin.com/posts/arshanmansuri_arvr-ipsacademy-innovation-activity-7257627257672744960-TuTD?utm_source=share&utm_medium=member_desktop" height="500" width="100%" frameborder="0" allowfullscreen title="Embedded post"></iframe>
+                    </div>
+                    <a href="https://in.linkedin.com/in/arshanmansuri" class="button" target="_blank">Visit My LinkedIn</a>
+                </div>
+                <div class="card">
+                    <h3>Latest Medium Article</h3>
+                    <div class="embed-container">
+                        <iframe src="https://medium.com/feed/@yourusername" height="500" width="100%" frameborder="0" allowfullscreen title="Medium blog"></iframe>
+                    </div>
+                    <a href="https://medium.com/@your-username" class="button" target="_blank">Read More on Medium</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="card contact-form">
+                <form id="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit" class="button">
+                        Send Message
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://github.com/ARSN72" class="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://in.linkedin.com/in/arshanmansuri" class="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="arsnishere@gmail.com" class="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+                <a href="https://instagram.com/justarsn" class="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                </a>
+                <a href="https://www.snapchat.com/add/arsn.ar" class="Snapchat">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                </a>
+            </div>
+            <p>&copy; 2024 Arshan Mansuri. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
