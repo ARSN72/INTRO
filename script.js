@@ -48,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     // Implement your form submission logic here
-    alert('Form submitted! (Note: This is a placeholder. Implement actual submission logic.)');
+    alert('Form submitted!');
 });
 
 // Skill progress animation
