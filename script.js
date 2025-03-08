@@ -48,7 +48,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     // Implement your form submission logic here
-    alert('Form submitted!');
+    alert("There's Some Error in Your Browser, please write a mail to Arshan at arsnishere@gmail.com or Contact him on LinkedIn");
 });
 
 // Skill progress animation
